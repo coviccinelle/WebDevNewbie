@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Effect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet"> 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        body {
+            background-color: #292929;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #btn {
+            text-decoration: none;
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5px;
+            transition: 0.3s all ease;
+            position: relative;
+        }
+
+        #btn:hover {
+            color: #292929;
+        }
+
+        #btn::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            z-index: -1;
+            background-color: #fff;
+            width: 38px;
+            height: 38px;
+            border-radius: 80px;
+            transition: 0.3s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        #btn:hover::before {
+            width: 100%;
+        }
+
+        #btn svg {
+            width: 30px;
+            height: 30px;
+            margin-right: 12px;
+        }
+
+        #btn svg path {
+            fill: #292929;
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <a href="" id="btn">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2" id="Layer_2"><path d="M19,26a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42L26.59,16l-8.3-8.29a1,1,0,0,1,1.42-1.42l9,9a1,1,0,0,1,0,1.42l-9,9A1,1,0,0,1,19,26Z"/><path d="M28,17H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/></g><g id="frame"><rect fill="none" height="32" width="32"/></g></svg>
+            Read More
+        </a>
+    </section>
+</body>
+</html>
