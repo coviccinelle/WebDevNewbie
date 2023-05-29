@@ -7,8 +7,8 @@ var DIRECTION = {
     RIGHT: 4
 };
  
-var rounds = [5, 5, 3, 3, 2];
-var colors = ['#1abc9c', '#2ecc71', '#3498db', '#8c52ff', '#9b59b6'];
+var rounds = [1, 1, 1];
+var colors = ['#ff6961', '#a9d39e', '#c89ed3'];
  
 // The ball object (The cube that bounces back and forth)
 var Ball = {
@@ -25,7 +25,7 @@ var Ball = {
     }
 };
  
-// The ai object (The two lines that move up and down)
+// The ai (paddle) object (The two lines that move up and down)
 var Ai = {
     new: function (side) {
         return {
@@ -35,7 +35,7 @@ var Ai = {
             y: (this.canvas.height / 2) - 35,
             score: 0,
             move: DIRECTION.IDLE,
-            speed: 8
+            speed: 10
         };
     }
 };
@@ -59,7 +59,7 @@ var Game = {
         this.running = this.over = false;
         this.turn = this.ai;
         this.timer = this.round = 0;
-        this.color = '#8c52ff';
+        this.color = '#9BB8D1';
  
         Pong.menu();
         Pong.listen();
@@ -119,7 +119,7 @@ var Game = {
         );
     },
  
-    // Update all objects (move the player, ai, ball, increment the score, etc.)
+    // Update all objects (move the player, paddle (ai), ball, increment the score, etc.)
     update: function () {
         if (!this.over) {
             // If the ball collides with the bound limits - correct the x and y coords.
