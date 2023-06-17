@@ -10,6 +10,4 @@ function square(number) {
 greet('Julien', 'Francais');
 greet('Mary', 'Smith');
 
-let number = square(2);
-
-console.log(number);
+console.log(square(33));
