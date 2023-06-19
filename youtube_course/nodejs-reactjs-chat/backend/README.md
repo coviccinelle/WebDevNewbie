@@ -23,4 +23,4 @@ Technoligies used in this project :
     - ReactJs
 
 What I should have done differently?
-    - Maybe start with rocket chat from the beginning. It has a free version with unlimited messages
+    - Maybe start with rocket chat from the beginning. It has a free version with unlimited messages. (Okay they said $0/user/month... What does that even mean)
