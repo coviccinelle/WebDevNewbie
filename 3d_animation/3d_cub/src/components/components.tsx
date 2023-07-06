@@ -9,3 +9,5 @@ export const Experience = () => {
         </>
     )
 }
+
+export default Experience = () => {
