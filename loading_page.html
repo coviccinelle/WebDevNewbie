@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loading Page</title>
+  <style>
+    /* CSS for the loading animation */
+    .loader {
+      border: 16px solid #f3f3f3;
+      border-top: 16px solid #3498db;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 2s linear infinite;
+      margin: auto;
+      margin-top: 20%;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* CSS to hide the content initially */
+    .content {
+      display: none;
+    }
+  </style>
+  <script>
+    // JavaScript to hide the loading animation and show the content after a delay
+    document.addEventListener("DOMContentLoaded", function() {
+      var loader = document.getElementById("loader");
+      var content = document.getElementById("content");
+      
+      setTimeout(function() {
+        loader.style.display = "none";
+        content.style.display = "block";
+      }, 3000); // Change the delay time (in milliseconds) as per your requirement
+    });
+  </script>
+</head>
+<body>
+  <!-- Loading animation -->
+  <div id="loader" class="loader"></div>
+  
+  <!-- Content to show after loading -->
+  <div id="content" class="content">
+    <h1>Welcome to my website!</h1>
+    <!-- Add your website content here -->
+  </div>
+</body>
+</html>
